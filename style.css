@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,400;1,500;1,600;1,700&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    margin: 0;
+    background-color: #111111;
+    color: white;
+
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* bloc central :*/
+.title_text_1, .title_text_2, .name{
+    position: absolute;
+
+    font-size: 8rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.title_text_1{
+    top: 150px;
+    left: 90px;
+
+    background: linear-gradient(90deg, #00A8FF 0%, rgba(255, 116, 141, 1) 50%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.title_text_2{
+    top: 275px;
+    left: 120px;
+
+    background: linear-gradient(90deg, #00A8FF 0%, rgba(255, 116, 141, 1) 50%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.name{
+    top: 80px;
+    left: 100px;
+
+    font-size: 3rem;
+    font-weight: 400;
+
+    background: linear-gradient(90deg, #00A8FF 0%, rgba(255, 116, 141, 1) 50%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.blob_central_blanc {
+    position: absolute;
+    top: -10px;
+    left: -350px;
+
+    width: 1628.478px;
+    height: 698.611px;
+
+    border-top: 80px;
+    border-left: 39px;
+    border-right: 39px;
+    border-bottom: 80px;
+
+    flex-shrink: 0;
+}
+
+/*bloc droit :*/
+
+.blob_droit_blanc{
+    position: absolute;
+    top: 200px;
+    right: -120px;
+    width: 20rem;
+    height: 20rem;
+    flex-shrink: 0;
+
+
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.bloc_droit_titre_1{
+    position: absolute;
+    top: 290px;
+    right: -60px;
+
+    font-size: 2rem;
+    font-style: normal;
+    font-family: 'IBM Plex Mono', monospace;
+
+    line-height: normal;
+
+    transform: rotate(-90deg);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
