@@ -1,36 +1,41 @@
+/*Import of : montserrat, roboto, IBM Plex Mono in every size and format. From google fonts*/
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,400;1,500;1,600;1,700&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 * {
     margin: 0;
-    background-color: #111111;
-    color: white;
+    background-color: transparent; /*so icons, text and all of that stuff have no backgrounds*/
+    color: white; /*because i want most of the text to be white*/
+}
 
-    font-family: 'Montserrat', sans-serif;
+body{
+    background-color: #111111; /*set a background to the body only*/
+    overflow-x: hidden; /*because the right_blocks are overflowing to the right*/
 }
 
 /* bloc central :*/
 .title_text_1, .title_text_2, .name{
+    font-family: 'Montserrat', sans-serif;
     position: absolute;
 
-    font-size: 8rem;
+    font-size: 6.5rem;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
 }
 
 .title_text_1{
-    top: 150px;
-    left: 90px;
+    top: 120px;
+    left: 80px;
 
     background: linear-gradient(90deg, #00A8FF 0%, rgba(255, 116, 141, 1) 50%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-}
+    }
 
 .title_text_2{
-    top: 275px;
-    left: 120px;
+    top: 225px;
+    left: 80px;
 
     background: linear-gradient(90deg, #00A8FF 0%, rgba(255, 116, 141, 1) 50%);
     background-clip: text;
@@ -39,10 +44,10 @@
 }
 
 .name{
-    top: 80px;
-    left: 100px;
+    top: 50px;
+    left: 90px;
 
-    font-size: 3rem;
+    font-size: 2.5rem;
     font-weight: 400;
 
     background: linear-gradient(90deg, #00A8FF 0%, rgba(255, 116, 141, 1) 50%);
@@ -56,8 +61,8 @@
     top: -10px;
     left: -350px;
 
-    width: 1628.478px;
-    height: 698.611px;
+    width: 1500px;
+    height: 600px;
 
     border-top: 80px;
     border-left: 39px;
@@ -67,16 +72,15 @@
     flex-shrink: 0;
 }
 
-/*bloc droit :*/
+/*bloc droit 1 :*/
 
 .blob_droit_blanc{
     position: absolute;
     top: 200px;
-    right: -120px;
-    width: 20rem;
-    height: 20rem;
+    right: -50px;
+    width: 10rem;
+    height: 15rem;
     flex-shrink: 0;
-
 
     background-clip: text;
     -webkit-background-clip: text;
@@ -86,16 +90,94 @@
 .bloc_droit_titre_1{
     position: absolute;
     top: 290px;
-    right: -60px;
+    right: -32px;
+
+    font-size: 1.25rem;
+    font-style: normal;
+    font-weight: bold;
+    font-family: 'IBM Plex Mono', monospace;
+
+    color: black;
+
+    transform: rotate(-90deg);
+}
+
+.logo_portfolio{
+    position: absolute;
+    top: 370px;
+    right: 5px;
+    width: 2rem;
+    height: 2rem;
+    flex-shrink: 0;
+}
+
+
+.cta_without_arrow {
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.6);
+    background-color: transparent;
+}
+
+.cta_arrow{
+    position: absolute;
+    left: 50%;
+    animation: arrow_animation 2s ease-in-out infinite;
+    transform: translate(-50%, -50%) scale(0.6);
+}
+
+.about_me_background{
+    position: absolute;
+    top: 700px;
+    left: 15vw;
+    width: 57rem;
+    height: 38rem;
+    flex-shrink: 0;
+}
+
+.bloc_droit_2{
+    position: absolute;
+    overflow-y: hidden;
+    top: 875px;
+    right: -14vw;
+    width: 18.75rem;
+    height: 20rem;
+    transform: scale(60%);
+}
+
+.bloc_droit_titre_2{
+    position: absolute;
+    top: 40%;
+    left: -10%;
 
     font-size: 2rem;
     font-style: normal;
+    font-weight: bold;
     font-family: 'IBM Plex Mono', monospace;
-
-    line-height: normal;
-
     transform: rotate(-90deg);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+}
+
+.logo_bloc_droit_2{
+    position: absolute;
+    left: 12.5%;
+    top: 75%;
+    /*coloring the icon*/
+    color: white;
+}
+
+
+@keyframes arrow_animation {
+    0% {
+        top: 87%;
+    }
+    50% {
+        top: 90%;
+    }
+    80%{
+        top: 87%; /*So it is still up for a moment (from 80 to 100%) */
+    }
+    100% {
+        top: 87%;
+    }
 }
