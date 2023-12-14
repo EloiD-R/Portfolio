@@ -111,19 +111,27 @@ body{
     flex-shrink: 0;
 }
 
-
 .cta_without_arrow {
+    opacity: 0;
+
     position: absolute;
     top: 90%;
     left: 50%;
     transform: translate(-50%, -50%) scale(0.6);
+    animation: CTA_show 1s ease-in-out forwards;
+    animation-delay: 0.5s;
     background-color: transparent;
 }
 
 .cta_arrow{
+    opacity: 0;
+
     position: absolute;
+    top: 87%;
     left: 50%;
-    animation: arrow_animation 2s ease-in-out infinite;
+    animation: CTA_show 0.5s ease-in-out forwards, arrow_animation 2s ease-in-out 1s infinite;
+    animation-delay: 2s;
+
     transform: translate(-50%, -50%) scale(0.6);
 }
 
@@ -177,7 +185,10 @@ body{
     80%{
         top: 87%; /*So it is still up for a moment (from 80 to 100%) */
     }
-    100% {
-        top: 87%;
+}
+
+@keyframes CTA_show {
+    to {
+        opacity: 1;
     }
 }
