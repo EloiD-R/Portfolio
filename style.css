@@ -129,7 +129,7 @@ body{
     position: absolute;
     top: 87%;
     left: 50%;
-    animation: CTA_show 0.5s ease-in-out forwards, arrow_animation 2s ease-in-out 1s infinite;
+    animation: CTA_show 1s ease-in-out forwards, arrow_animation 2s ease-in-out 1s infinite;
     animation-delay: 2s;
 
     transform: translate(-50%, -50%) scale(0.6);
@@ -148,7 +148,7 @@ body{
     position: absolute;
     overflow-y: hidden;
     top: 875px;
-    right: -14vw;
+    right: -190px;
     width: 18.75rem;
     height: 20rem;
     transform: scale(60%);
@@ -157,12 +157,13 @@ body{
 .bloc_droit_titre_2{
     position: absolute;
     top: 40%;
-    left: -10%;
+    left: -17%;
 
-    font-size: 2rem;
+    font-size: 2.5rem;
     font-style: normal;
     font-weight: bold;
     font-family: 'IBM Plex Mono', monospace;
+    color: white;
     transform: rotate(-90deg);
 }
 
@@ -170,8 +171,6 @@ body{
     position: absolute;
     left: 12.5%;
     top: 75%;
-    /*coloring the icon*/
-    color: white;
 }
 
 
