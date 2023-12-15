@@ -1,9 +1,11 @@
-/*Import of : montserrat, roboto, IBM Plex Mono in every size and format. From google fonts*/
+/*Import of : montserrat, roboto, IBM Plex Mono in every size and format. From google fonts :*/
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,400;1,500;1,600;1,700&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
+
+/*General properties :*/
 * {
-    margin: 0;
-    background-color: transparent; /*so icons, text and all of that stuff have no backgrounds*/
+    margin: 0; /*to have no offset related problems*/
+    background-color: transparent; /*so icons, text and all of that stuff have no background*/
     color: white; /*because i want most of the text to be white*/
 }
 
@@ -12,177 +14,283 @@ body{
     overflow-x: hidden; /*because the right_blocks are overflowing to the right*/
 }
 
-/* bloc central :*/
-.title_text_1, .title_text_2, .name{
-    font-family: 'Montserrat', sans-serif;
+
+
+/*main page :*/
+/* main section :*/
+.main_section_title_1, .main_section_title_2, .main_section_name {
+    /*For right placement later :*/
     position: absolute;
 
+    /*Dealing with text :*/
+    font-family: 'Montserrat', sans-serif;
     font-size: 6.5rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+
+    /*changing background color :*/
+    background: linear-gradient(90deg, #00A8FF 0%, rgba(255, 116, 141, 1) 50%);
+    /*not applying it to the background but to the letters :*/
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.main_section_title_1 {
+    /*placement :*/
+    top: 120px;
+    left: 80px;
+}
+
+.main_section_title_2 {
+    /*placement :*/
+    top: 215px;
+    left: 100px;
+}
+
+.main_section_name {
+    /*placement :*/
+    top: 50px;
+    left: 90px;
+
+    /*Changing some font parameters because they are not same that the titles :*/
+    font-size: 2.5rem;
+    font-weight: 400;
+}
+
+.main_section_blob {
+    /*placement :*/
+    position: absolute;
+    top: -10px;
+    left: -350px;
+
+    /*size :*/
+    width: 1500px;
+    height: 600px;
+}
+
+
+/*side 1 :*/
+.side_1_blob{
+    /*placement :*/
+    position: absolute;
+    top: 200px;
+    right: -50px;
+
+    /*size :*/
+    width: 10rem;
+    height: 15rem;
+}
+
+.side_1_title{
+    /*placement :*/
+    position: absolute;
+    top: 280px;
+    right: -32px;
+
+    /*Dealing with text :*/
+    font-size: 1.25rem;
+    font-style: normal;
+    font-weight: bold;
+    font-family: 'IBM Plex Mono', monospace;
+    color: black;
+
+    /*Display text vertically and bigger than the 1.25rem :*/
+    transform: rotate(-90deg) scale(110%);
+}
+
+.side_1_icon{
+    /*placement :*/
+    position: absolute;
+    top: 370px;
+    right: 5px;
+
+    /*size :*/
+    width: 2rem;
+    height: 2rem;
+
+    /*making it bigger than it really is :*/
+    transform: scale(110%);
+}
+
+
+
+/*Intermediate section :*/
+/*CTA :*/
+.cta_base {
+    /*Hide it so the animation can reveal it :*/
+    opacity: 0;
+
+    /*placement :*/
+    position: absolute;
+    top: 560px;
+    left: 50%;
+
+    /*size :*/
+    transform: translate(-50%, -50%) scale(0.6);
+
+    /*animation :*/
+    animation: CTA_show 2s ease-in-out forwards;
+    animation-delay: 0.5s;
+}
+
+.cta_arrow{
+    /*Hide it so the animation can reveal it :*/
+    opacity: 0;
+
+    /*placement :*/
+    position: absolute;
+    top: 545px;
+    left: 50%;
+
+    /*size :*/
+    transform: translate(-50%, -50%) scale(0.6);
+
+    /*animation :*/
+    animation: CTA_show 0.5s ease-in-out forwards, arrow_animation 2s ease-in-out 1s infinite;
+    animation-delay: 2s;
+}
+
+
+
+/*about me page :*/
+/*about me section :*/
+.about_me_section_background{
+    /*placement :*/
+    position: absolute;
+    top: 1050px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    /*size :*/
+    width: 57rem;
+    height: 38rem;
+}
+
+.about_me_section_title{
+    /*placement :*/
+    position: absolute;
+    top: 990px;
+    left: 49%;
+    transform: translate(-50%, -50%);
+
+    /*size :*/
+    width: 44rem;
+    height: 16rem;
+
+    /*making it getting a nice look :*/
+    font-family: 'Montserrat', sans-serif;
+    font-size: 4rem;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
 }
 
-.title_text_1{
-    top: 120px;
-    left: 80px;
-
-    background: linear-gradient(90deg, #00A8FF 0%, rgba(255, 116, 141, 1) 50%);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    }
-
-.title_text_2{
-    top: 225px;
-    left: 80px;
-
-    background: linear-gradient(90deg, #00A8FF 0%, rgba(255, 116, 141, 1) 50%);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-.name{
-    top: 50px;
-    left: 90px;
-
-    font-size: 2.5rem;
-    font-weight: 400;
-
-    background: linear-gradient(90deg, #00A8FF 0%, rgba(255, 116, 141, 1) 50%);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-.blob_central_blanc {
+.about_me_section_text{
+    /*placement :*/
     position: absolute;
-    top: -10px;
-    left: -350px;
+    top: 1090px;
+    left: 48.8%;
+    transform: translate(-50%, -50%);
 
-    width: 1500px;
-    height: 600px;
-
-    border-top: 80px;
-    border-left: 39px;
-    border-right: 39px;
-    border-bottom: 80px;
-
-    flex-shrink: 0;
-}
-
-/*bloc droit 1 :*/
-
-.blob_droit_blanc{
-    position: absolute;
-    top: 200px;
-    right: -50px;
-    width: 10rem;
-    height: 15rem;
-    flex-shrink: 0;
-
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-.bloc_droit_titre_1{
-    position: absolute;
-    top: 290px;
-    right: -32px;
-
-    font-size: 1.25rem;
+    /*text formatting :*/
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5rem;
     font-style: normal;
-    font-weight: bold;
-    font-family: 'IBM Plex Mono', monospace;
-
-    color: black;
-
-    transform: rotate(-90deg);
+    font-weight: 400;
+    line-height: normal;
 }
 
-.logo_portfolio{
+.about_me_section_redirection_button{
+    /*placement :*/
     position: absolute;
-    top: 370px;
-    right: 5px;
-    width: 2rem;
-    height: 2rem;
-    flex-shrink: 0;
+    top: 1220px;
+    left: 66%;
+    transform: translate(-50%, -50%);
+
+    /*Dealing with text :*/
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.1rem;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+
+    /*hiding the disgusting box of an html button*/
+    border-color: transparent;
 }
 
-.cta_without_arrow {
-    opacity: 0;
+/* There was a try to make the button bigger on hover but ...
+.hover_oversizing_trigger{
+    top: 1220px;
+    left: 66%;
 
-    position: absolute;
-    top: 90%;
-    left: 50%;
-    transform: translate(-50%, -50%) scale(0.6);
-    animation: CTA_show 1s ease-in-out forwards;
-    animation-delay: 0.5s;
-    background-color: transparent;
+    width: 135px;
+    height: 25px;
 }
 
-.cta_arrow{
-    opacity: 0;
+.about_me_section_redirection_button:hover .hover_oversizing_trigger + .about_me_section_redirection_link {
+    transform: scale(200%);
+}
+ */
 
-    position: absolute;
-    top: 87%;
-    left: 50%;
-    animation: CTA_show 1s ease-in-out forwards, arrow_animation 2s ease-in-out 1s infinite;
-    animation-delay: 2s;
+.about_me_section_redirection_link{
 
-    transform: translate(-50%, -50%) scale(0.6);
+    /*styling da text :*/
+    text-decoration: none;
+    /*same background as text above :*/
+    background: linear-gradient(90deg, #00A8FF 0%, rgba(255, 116, 141, 1) 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
-.about_me_background{
-    position: absolute;
-    top: 700px;
-    left: 15vw;
-    width: 57rem;
-    height: 38rem;
-    flex-shrink: 0;
-}
 
-.bloc_droit_2{
+/*side 2 :*/
+.side_2{
+    /*placement :*/
     position: absolute;
-    overflow-y: hidden;
-    top: 875px;
+    top: 900px;
     right: -190px;
+
+    /*size :*/
     width: 18.75rem;
     height: 20rem;
     transform: scale(60%);
+
+    /*because the image is too big so you can still scroll but
+    in this version i don't want it because there is no projects section */
+    overflow-y: hidden;
 }
 
-.bloc_droit_titre_2{
+.side_2_title{
+    /*for placement*/
     position: absolute;
-    top: 40%;
-    left: -17%;
+    top: 125px;
+    left: -52.5px;
 
+    /*dealing with text :*/
     font-size: 2.5rem;
     font-style: normal;
     font-weight: bold;
     font-family: 'IBM Plex Mono', monospace;
     color: white;
+
+    /*Display text vertically :*/
     transform: rotate(-90deg);
 }
 
-.logo_bloc_droit_2{
-    position: absolute;
-    left: 12.5%;
-    top: 75%;
-}
 
-
+/*Animations @keyframes (show and arrow) :*/
 @keyframes arrow_animation {
     0% {
-        top: 87%;
+        top: 545px;
     }
     50% {
-        top: 90%;
+        top: 570px;
     }
     80%{
-        top: 87%; /*So it is still up for a moment (from 80 to 100%) */
+        top: 545px; /*So it is still up a bit (from 80% to 100%) */
     }
 }
 
