@@ -118,6 +118,18 @@ body{
 
 /*Intermediate section :*/
 /*CTA :*/
+
+#scrollToAbout{
+    /*placement :*/
+    position: absolute;
+    top: 560px;
+    left: 50%;
+
+    z-index: -1;
+
+
+}
+
 .cta_base {
     /*Hide it so the animation can reveal it :*/
     opacity: 0;

@@ -25,8 +25,10 @@
 
         <div class="intermediate_section">
             <div class="CTA">
-                <img src="assets/CTA/cta_base.svg" class="cta_base" alt="Call to action base">
-                <img src="assets/CTA/cta_arrow.svg" class="cta_arrow" alt="Scroll !">
+                <button id="scrollToAbout" onclick="scrollToAbout()">
+                    <img src="assets/CTA/cta_base.svg" class="cta_base" alt="Call to action base">
+                    <img src="assets/CTA/cta_arrow.svg" class="cta_arrow" alt="Scroll !">
+                </button>
             </div>
         </div>
 
@@ -63,5 +65,35 @@ In et velit nisl. Integer neque magna, venenatis eu felis vitae, tincidunt laore
                 <p class="side_2_title">about me</p>
             </div>
         </div>
+
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                var ctaBase = document.querySelector(".cta_base");
+                var scrollToAboutButton = document.getElementById("scrollToAbout");
+
+                function scrollToAbout() {
+                    window.scrollTo({
+                        top: 0,
+                        behavior: 'smooth'
+                    });
+                }
+
+                scrollToAboutButton.addEventListener("click", scrollToAbout);
+
+                window.onscroll = function () {
+                    var currentScroll = document.body.scrollTop || document.documentElement.scrollTop;
+
+                    // Adjust the threshold as needed
+                    if (currentScroll > 20) {
+                        // Play the animations
+                        ctaBase.style.animationPlayState = "running";
+                    } else {
+                        // Pause the animations
+                        ctaBase.style.animationPlayState = "paused";
+                    }
+                };
+            });
+        </script>
+
     </body>
 </html>
