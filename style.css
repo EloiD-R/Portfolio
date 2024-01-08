@@ -194,15 +194,15 @@ body{
     left: 50%;
     transform: translateX(-53%);
     width: 77%;
-    height: 61%;
+    height: 57%;
     overflow: hidden;
 }
 
 .about_me_section_redirection_button{
     /*placement :*/
     position: absolute;
-    bottom: 15%;
-    left: 80%;
+    bottom: 16%;
+    left: 79%;
     transform: translate(-50%, -50%);
 
     /*Dealing with text :*/
